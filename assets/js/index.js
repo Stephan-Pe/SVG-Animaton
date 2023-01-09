@@ -14,6 +14,7 @@ const activate = () => {
     const leftKick = document.querySelector('.line.left');
     const rightKick = document.querySelector('.line.right');
     const msg = document.querySelector('#power-text');
+    const btnJump = document.querySelector('#btn-jump');
     container.addEventListener('click', (e) => {
         left.classList.remove('remove-animation');
         right.classList.remove('remove-animation');
@@ -24,7 +25,7 @@ const activate = () => {
             atSign.classList.add('active');
             button.classList.add('active');
         } else if (e.target.matches('#btn-jump')) {
-
+            btnJump.innerText = 'jumping';
             left.style.animation = `jumpRight 800ms linear forwards`;
             right.style.animation = `jumpLeft 800ms linear forwards`;
             leftKick.style.animation = `kickRight .1s ease-in-out 2 forwards`;
@@ -38,7 +39,8 @@ const activate = () => {
             redLetters.classList.remove('active');
             atSign.classList.remove('active');
             button.classList.remove('active');
-            msg.innerHTML = '<p>Start Animation.</p>';
+            msg.innerHTML = '<p>Start Animation</p>';
+            btnJump.innerText = 'kick it';
             left.classList.add('remove-animation');
             right.classList.add('remove-animation');
             leftKick.classList.add('remove-animation');
