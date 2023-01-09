@@ -1,0 +1,19 @@
+{
+  "name": "svg_animation",
+  "version": "1.0.0",
+  "description": "animate svg with css and js",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=compressed scss:assets/css",
+    "prod": "cross-env NODE_ENV=prod gulp && sass --no-source-map --style=compressed scss:assets/css"
+  },
+  "keywords": [
+    "svg",
+    "animation"
+  ],
+  "author": "Stephan Petersen",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
